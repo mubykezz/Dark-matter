@@ -1,8 +1,8 @@
 {
   type: "journal",
   callNumber: "J-015",
-  title: "Nysc orientation camp 2026",
-  excerpt: "One of the best momentsof my life happened at zamfara temp. orientation camp laland gusau.",
+  title: "nysc orientation camp 2026",
+  excerpt: "One of the best momentsof my life happened at zamfara temp. orientation camp laland gusau",
   date: "2026-07-02"
 },// ---------------------------------------------------------------
 // YOUR ENTRIES LIVE HERE.
