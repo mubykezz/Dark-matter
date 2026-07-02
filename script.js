@@ -4,13 +4,6 @@
   title: "nysc orientation camp 2026",
   excerpt: "One of the best momentsof my life happened at zamfara temp. orientation camp laland gusau",
   date: "2026-07-02"
-},// ---------------------------------------------------------------
-// YOUR ENTRIES LIVE HERE.
-// Each entry needs: type ("journal" | "project" | "note"),
-// callNumber (any short code you like), title, excerpt, date,
-// and an optional link { label, url }.
-// Add new ones to the TOP of the array — newest first.
-// ---------------------------------------------------------------
 const entries = [
   {
     type: "note",
