@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Archive — a personal catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="tab">THE ARCHIVE</div>
+  <nav>
+    <a href="#catalog">Catalog</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <p class="eyebrow">Est. <span id="year"></span> · Personal collection</p>
+  <h1>Everything I keep,<br>filed.</h1>
+  <p class="hero-sub">A running catalog of what I write, build, and want to remember. No feeds, no algorithm — just entries, in order, findable by type.</p>
+</section>
+
+<section class="filters" aria-label="Filter entries by type">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="journal">Journal</button>
+  <button class="filter-btn" data-filter="project">Projects</button>
+  <button class="filter-btn" data-filter="note">Notes</button>
+</section>
+
+<main id="catalog" class="catalog" aria-live="polite">
+  <!-- Cards are rendered here by script.js -->
+</main>
+
+<section id="about" class="about">
+  <div class="card about-card">
+    <p class="eyebrow">Card No. 000 — About</p>
+    <h2>Who's filing all this</h2>
+    <p>This is a personal site built to hold a mix of things — journal entries, projects, and quick notes — in one place I control. Edit this paragraph in <code>index.html</code> to introduce yourself.</p>
+  </div>
+</section>
+
+<footer id="contact" class="site-footer">
+  <p>Reach me at <a href="mailto:you@example.com">you@example.com</a></p>
+  <p class="stamp">Cataloged with care, <span id="year2"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
