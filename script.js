@@ -1,4 +1,5 @@
-// ---------------------------------------------------------------
+
+ // ---------------------------------------------------------------
 // YOUR ENTRIES LIVE HERE.
 // Each entry needs: type ("journal" | "project" | "note"),
 // callNumber (any short code you like), title, excerpt, date,
@@ -11,7 +12,8 @@ const entries = [
     callNumber: "J-015",
     title: "nysc orientation camp 2026",
     excerpt: "One of the best moments of my life happened at zamfara temp. orientation camp laland gusau",
-    date: "2026-07-02"
+    date: "2026-07-02",
+    media: { kind: "image", src: "media/map.jpg" }
   },
   {
     type: "note",
@@ -89,10 +91,17 @@ function renderEntries(filter) {
       ? `<a href="${entry.link.url}">${entry.link.label} →</a>`
       : `<span></span>`;
 
+    const mediaHtml = entry.media
+      ? entry.media.kind === "video"
+        ? `<video class="card-media" src="${entry.media.src}" controls></video>`
+        : `<img class="card-media" src="${entry.media.src}" alt="${entry.title}" loading="lazy">`
+      : "";
+
     card.innerHTML = `
       <div class="category-strip"></div>
       <p class="call-number">${entry.callNumber}</p>
       <p class="eyebrow">${entry.type}</p>
+      ${mediaHtml}
       <h3>${entry.title}</h3>
       <p class="excerpt">${entry.excerpt}</p>
       <div class="meta">
@@ -118,5 +127,4 @@ document.getElementById("year").textContent = yearNow;
 document.getElementById("year2").textContent = yearNow;
 
 renderEntries("all");
-
-    
+   
