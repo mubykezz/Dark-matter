@@ -1,5 +1,4 @@
-
- // ---------------------------------------------------------------
+// ---------------------------------------------------------------
 // YOUR ENTRIES LIVE HERE.
 // Each entry needs: type ("journal" | "project" | "note"),
 // callNumber (any short code you like), title, excerpt, date,
@@ -14,9 +13,9 @@ const entries = [
     excerpt: "One of the best moments of my life happened at zamfara temp. orientation camp laland gusau",
     date: "2026-07-02",
     media: [
-  { kind: "image", src: "media/nigerian-map.jpg" },
-  { kind: "image", src: "media/zm-1.jpg" },
-]
+      { kind: "image", src: "media/nigerian-map.jpg" }
+     {kind: "image", src: "media/zm-1.jpg" }
+    ]
   },
   {
     type: "note",
@@ -94,10 +93,18 @@ function renderEntries(filter) {
       ? `<a href="${entry.link.url}">${entry.link.label} →</a>`
       : `<span></span>`;
 
-    const mediaHtml = entry.media
-      ? entry.media.kind === "video"
-        ? `<video class="card-media" src="${entry.media.src}" controls></video>`
-        : `<img class="card-media" src="${entry.media.src}" alt="${entry.title}" loading="lazy">`
+    const mediaList = entry.media
+      ? Array.isArray(entry.media) ? entry.media : [entry.media]
+      : [];
+
+    const mediaHtml = mediaList.length
+      ? `<div class="card-media-grid">` +
+        mediaList.map(m =>
+          m.kind === "video"
+            ? `<video class="card-media" src="${m.src}" controls></video>`
+            : `<img class="card-media" src="${m.src}" alt="${entry.title}" loading="lazy">`
+        ).join("") +
+        `</div>`
       : "";
 
     card.innerHTML = `
@@ -130,4 +137,3 @@ document.getElementById("year").textContent = yearNow;
 document.getElementById("year2").textContent = yearNow;
 
 renderEntries("all");
-   
