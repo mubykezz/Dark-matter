@@ -13,7 +13,7 @@ const entries = [
     title: "nysc orientation camp 2026",
     excerpt: "One of the best moments of my life happened at zamfara temp. orientation camp laland gusau",
     date: "2026-07-02",
-    media: { kind: "image", src: "map.jpg" }
+    media: { kind: "image", src: "media/nigerian-map.jpg" }
   },
   {
     type: "note",
