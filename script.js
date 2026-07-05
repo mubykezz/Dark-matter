@@ -14,7 +14,6 @@ const entries = [
     date: "2026-07-02",
     media: [
       { kind: "image", src: "media/nigerian-map.jpg" }
-     {kind: "image", src: "media/zm-1.jpg" }
     ]
   },
   {
